@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluffy – A Drivable Engineering Resume</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #141824;
+      --card: #1b2030;
+      --accent: #4da3ff;
+      --accent-soft: #2b5c9a;
+      --text: #e8eaf0;
+      --muted: #9aa1b2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      min-height: 90vh;
+      display: grid;
+      place-items: center;
+      padding: 4rem 1.5rem;
+      background:
+        linear-gradient(180deg, rgba(11,13,18,0.85), rgba(11,13,18,1)),
+        url("images/hero.jpg") center / cover no-repeat;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    header h1 span {
+      color: var(--accent);
+    }
+
+    header p {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background: rgba(11,13,18,0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1f2435;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    nav a:hover { opacity: 1; color: var(--accent); }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    section { margin-bottom: 4rem; }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    h3 { margin-top: 0; }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+    }
+
+    .callout {
+      border-left: 3px solid var(--accent-soft);
+      padding-left: 1rem;
+      margin: 1.25rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: #222846;
+      color: #cfd6ff;
+      font-size: 0.85rem;
+      margin: 0.35rem 0.35rem 0 0;
+    }
+
+    footer {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #1f2435;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1><span>Fluffy</span> – A Drivable Engineering Resume</h1>
+    <p>
+      A 1966 Ford F100 re-engineered from the ground up to demonstrate real-world mechanical,
+      electrical, and manufacturing engineering skills through hands-on design, fabrication,
+      and iterative problem solving.
+    </p>
+  </div>
+</header>
+
+<nav>
+  <a href="#summary">Project Overview</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#design">Engineering Decisions</a>
+  <a href="#systems">Vehicle Systems</a>
+  <a href="#skills">Skills</a>
+  <a href="#status">Current Work</a>
+</nav>
+
+<main>
+
+<section id="summary">
+  <h2>Project Overview</h2>
+  <div class="card">
+    <p>
+      This project documents the complete modernization of a 1966 Ford F-100 into what I refer to as a
+      <em>drivable engineering resume</em>. I purchased the truck in middle school following the COVID
+      pandemic as a minimally functional vehicle—it could start, drive, and stop, but lacked power
+      steering, power brakes, air conditioning, modern safety equipment, and reliable suspension
+      geometry. The original drivetrain consisted of a Ford FE 352 paired with a worn five-speed
+      transmission, and the vehicle was not suitable for consistent or safe daily use.
+    </p>
+    <p>
+      The long-term objective of the project has been to transform the truck into a reliable,
+      well-engineered vehicle while preserving its original frame and utility. Rather than performing
+      a cosmetic restoration, the focus has been on system-level engineering: integrating modern OEM
+      components, fabricating custom interfaces, and redesigning subsystems to function cohesively.
+      Every major system—drivetrain, suspension, braking, electrical, and HVAC—has been evaluated and
+      either redesigned or replaced to meet modern performance and reliability expectations.
+    </p>
+    <p>
+      As my technical skills developed, the project evolved from a simple lowered truck into a
+      platform for iterative engineering improvement. Design decisions are driven by safety,
+      manufacturability, serviceability, and future modular upgrades. The truck is intentionally
+      engineered to remain adaptable, allowing components to be redesigned as better solutions are
+      identified. This approach mirrors real-world engineering workflows and reflects my growth in
+      applied mechanical design, fabrication, and problem-solving.
+    </p>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Project Gallery</h2>
+  <div class="gallery">
+    <img src="images/front.jpg" alt="1966 Ford F100 front view" />
+    <img src="images/angle.jpg" alt="1966 Ford F100 three quarter view" />
+    <img src="images/owner.jpg" alt="Builder with truck" />
+  </div>
+</section>
+
+<section id="design">
+  <h2>Key Engineering Decisions</h2>
+  <div class="card">
+    <h3>Crown Victoria Front Subframe Conversion</h3>
+    <p>
+      The original Ford Twin I-Beam front suspension was evaluated early in the project and ultimately
+      determined to be a limiting factor for both performance and long-term reliability goals. While
+      the system is durable, its geometry allows each beam to move independently, which introduces
+      alignment changes throughout suspension travel.
+    </p>
+    <p>
+      As components wear, these geometry changes commonly result in uneven front tire wear, reduced
+      steering precision, and increased maintenance requirements. The steering linkage design further
+      complicates adjustment and tuning, particularly when attempting to lower the vehicle.
+      Additionally, the Twin I-Beam architecture significantly restricts safe ride-height reduction,
+      which conflicted with the project’s design intent.
+    </p>
+    <div class="callout">
+      Engineering assessment: The Twin I-Beam system limited alignment stability, lowering potential,
+      and steering predictability, making it unsuitable for a modernized, lowered, and frequently
+      driven truck.
+    </div>
+    <p>
+      The Crown Victoria front subframe introduces modern suspension geometry with improved camber
+      control, reduced tire wear, and significantly improved on-road behavior. The integrated steering
+      and braking systems simplify serviceability and allow the truck to achieve a lower ride height
+      while maintaining predictable suspension travel and safety margins.
+    </p>
+
+    <h3>Subframe Swap vs. Full Frame Swap</h3>
+    <p>
+      A full frame swap was evaluated but ultimately rejected due to the extensive cutting
+      required and the loss of original truck functionality. Retaining the factory frame
+      preserves bed utility and avoids heavy notching that would compromise long-term use.
+    </p>
+    <div class="callout">
+      Design philosophy: Preserve originality where it provides value; modernize where it
+      limits performance, safety, or future development.
+    </div>
+    <p>
+      Maintaining the original rear frame architecture also enables future suspension
+      upgrades that can outperform a modified Crown Victoria rear setup. This approach
+      supports the long-term modularity of the vehicle as my skills, budget, and goals evolve.
+    </p>
+  </div>
+</section>
+
+<section id="systems">
+  <h2>Vehicle Systems Overview</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Drivetrain</h3>
+      <ul>
+        <li>Ford 4.6L 2V PI V8 (2005 ex-police, rebuilt 2013)</li>
+        <li>Ford 4R75W automatic transmission</li>
+        <li>Custom transmission crossmember and floor shifter</li>
+        <li>Heavy-duty police radiator with fabricated mounts</li>
+        <li>Custom exhaust system</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Chassis & Suspension</h3>
+      <ul>
+        <li>Crown Victoria front subframe conversion</li>
+        <li>CNC-cut custom coilover mounts</li>
+        <li>Rear flip kit with new leaf springs</li>
+        <li>Four-wheel disc brake conversion</li>
+        <li>Hand-fabricated brake lines</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Electrical & Controls</h3>
+      <ul>
+        <li>Route 66 universal wiring harness</li>
+        <li>Modified Crown Vic engine/transmission harness</li>
+        <li>Updated gauges with Dakota Digital speed conversion</li>
+        <li>LED exterior lighting</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Comfort & Usability</h3>
+      <ul>
+        <li>Vintage Air HVAC system (heat, AC, defrost)</li>
+        <li>Relocated fuel tank under bed</li>
+        <li>Improved ergonomics and drivability</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills Demonstrated Through This Project</h2>
+  <div class="card">
+    <p>
+      This build required applying engineering principles across multiple domains while managing
+      real-world constraints such as manufacturability, safety, cost, and serviceability. Skills
+      listed below were developed and demonstrated directly through the design, fabrication,
+      integration, and testing of the vehicle.
+    </p>
+    <span class="tag">System-Level Mechanical Design</span>
+    <span class="tag">Suspension Geometry & Chassis Engineering</span>
+    <span class="tag">Iterative Design & Validation</span>
+    <span class="tag">Electrical Diagnostics</span>
+    <span class="tag">Wiring Diagrams & Harness Modification</span>
+    <span class="tag">Welding & Structural Fabrication</span>
+    <span class="tag">CAD / CAM Integration</span>
+    <span class="tag">CNC Plasma Cutting</span>
+    <span class="tag">3D Printing & Prototyping</span>
+    <span class="tag">Failure Analysis & Troubleshooting</span>
+    <span class="tag">Project Planning & Long-Term Development</span>
+  </div>
+</section>
+
+<section id="status">
+  <h2>Current Status & Next Steps</h2>
+  <div class="card">
+    <p>
+      Current work includes redesigning the front coilover mounts using a keyed and slotted
+      interface to improve strength and load transfer. These components are being CAD-designed,
+      CNC-cut, and welded in-house.
+    </p>
+    <p>
+      Additional tasks include weatherproofing the cab, sourcing vent window components, and
+      installing and calibrating instrumentation such as the speedometer and fuel gauge.
+    </p>
+    <p>
+      Upcoming work will focus on rear shock relocation brackets designed and fabricated using
+      a CNC plasma table to correct shock geometry and improve rear suspension performance.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <details class="card">
+    <summary style="cursor:pointer; font-size:1.15rem; font-weight:600;">Click to expand full resume</summary>
+    <div style="margin-top:1.5rem;">
+      <h3>Gavin Reece</h3>
+      <p>470-230-6474 · greece8@students.kennesaw.edu · <a href="https://www.linkedin.com/in/gavin-reece-02124936a" target="_blank">LinkedIn</a></p>
+
+      <h4>Education</h4>
+      <p><strong>Kennesaw State University – Southern Polytechnic College of Engineering</strong><br>
+      B.S. Mechanical Engineering, Expected May 2029 · GPA: 3.4 / 4.0</p>
+      <p><strong>Rockdale Magnet High School for Science and Technology</strong><br>
+      Top 10% · GPA: 3.98 / 4.0 · Class of 2025</p>
+
+      <h4>Technical Skills</h4>
+      <ul>
+        <li>SolidWorks, Onshape, Fusion 360, MATLAB</li>
+        <li>Engineering drawings & GD&T fundamentals</li>
+        <li>Electrical schematics and wiring diagnostics</li>
+        <li>Welding (MIG, TIG, Stick) and metal fabrication</li>
+        <li>CNC plasma cutting and additive manufacturing</li>
+        <li>Mechanical diagnostics and failure analysis</li>
+        <li>Project planning and process-driven problem solving</li>
+      </ul>
+
+      <h4>Project Experience</h4>
+      <p><strong>1966 Ford F-100 Restomod (“Fluffy”)</strong> · 2020 – Present<br>
+      Multi-year personal engineering project focused on system-level modernization of a vintage
+      vehicle. Responsibilities include mechanical design, CAD modeling, fabrication, welding,
+      CNC plasma cutting, electrical integration, and iterative redesign of components based on
+      real-world testing. The project emphasizes manufacturability, serviceability, safety, and
+      long-term modular improvement.</p>
+
+      <p><strong>Formula SAE – Kennesaw State University</strong> · 2025 – Present<br>
+      Active member contributing to vehicle design, analysis, and validation testing within a
+      multidisciplinary engineering team focused on performance and reliability.</p>
+
+      <h4>Experience & Leadership</h4>
+      <ul>
+        <li>Electrician Helper / Vehicle & Fabrication Technician – Reece Electrical Services</li>
+        <li>SkillsUSA Automotive Technologies – Regional Gold (2024), State Bronze (2025)</li>
+        <li>Georgia Technology Fair – Bronze Medalist (2025)</li>
+        <li>International Science & Engineering Fair Competitor (2025)</li>
+        <li>State Science Fair – 3rd Place (2×), IEEE Award Recipient</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <p>Fluffy · A living engineering portfolio · Hosted on GitHub Pages</p>
+</footer>
+
+</body>
+</html>
